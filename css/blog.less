@@ -1,0 +1,379 @@
+/*//////////////////////////////////////////////////////////////////////////////////////////////////
+
+SIGNAL
+
+Theme Name: Avada Child Theme
+Author: Tom Brookes & Tom Dent
+Author URI: http://www.doubledcreative.com
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+CONTENTS
+
+- Single Page Styling
+- Blog Archive Grid
+- Media Queries
+	- 1024px
+	- 800px
+	- 500px
+	
+	
+//////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+
+/* GLOBAL STYLES - SINGLE PAGE */
+
+.post-template-default, .single, .single-post{	
+	#main{
+		
+		/* Paragraph Styling */
+		p, a{font-size: 16px!important; line-height: 24px!important;}
+		
+		/* Left Margins - Paragraphs & Titles */
+		.fusion-title, p{margin-left: 100px!important;}
+		
+		/* Blockquote Styling */
+		blockquote{border: none!important; background: transparent!important; padding: 0!important; margin: 37px 0 42px -50px !important; color: @blue; font-style: normal!important; .letter-spacing();
+			p{.font-bold(); font-size: 28px!important; line-height: 38px!important;}
+		}
+		
+		/* Image Frame Styling */
+		.fusion-imageframe{.border-radius(@border-radius: 0 0 60px 0); margin: 33px 0 51px !important;}
+		
+		/* Gallery Container Styling */
+		.fusion-gallery{margin: 46px 0 46px 40px!important;}
+
+	}
+}
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+/* SINGLE PAGE STYLING */
+
+/* Single Page Styling & Margins */
+.post-template-default, .single, .single-post{
+	#main{.max-width(@max-width: 1260px); padding: 100px 100px 100px 0!important;
+		#content{width: 67%!important;
+			li{margin-left: -25px;}
+			.fusion-meta-info{margin: 13px 0 -17px 100px!important; border: none!important;
+				.fusion-meta-info-wrapper{
+					span, a{.font-bold(); font-size: 10px; color: @blue;}
+				}
+			}
+		}		
+	}
+}
+
+/* Search Bar Styling */
+#sidebar{
+	#search-2, .widget_search{.border-radius(@border-radius: 0); background: transparent!important;
+		.searchform{.border(); .border-radius(@border-radius: 40px);
+			.search-table{
+				
+				.search-field{
+					input{border: none; background: transparent!important; height: 54px;.font-bold(); color: @greyblue; .uppercase(); font-size: 16px;}
+					
+					input::-webkit-input-placeholder{color: @greyblue;}
+					input:-moz-placeholder{color: @greyblue;}
+					input::-moz-placeholder{color: @greyblue;}
+					input:-ms-input-placeholder{color: @greyblue;}
+					input:placeholder{color: @greyblue;}	
+					
+				}
+
+				.search-button{
+					.searchsubmit{color: @blue; background: transparent!important; height: 54px; width: 54px; line-height: 52px; font-size: 23px;
+						&:hover{color: @skyblue;}
+					}
+				}
+				
+			}
+		}
+	}
+}
+
+/* Widget Styling */
+#sidebar{
+	.widget{background: @grey1; .border-radius(@border-radius: 0 0 30px 0);
+		.heading{
+			.widget-title{padding: 14px 22px!important; line-height: 30px!important; letter-spacing: 2px!important; margin-bottom: 0!important;}
+		}
+		ul{
+			li{padding: 14px 22px!important; border-bottom-color: lighten(@grey2, @20per);
+				&:last-of-type{border-bottom: none!important; .border-radius(@border-radius: 0 0 30px 0);}
+				a{font-size: 16px!important; line-height: 24px!important; color: @greyblue;
+					&:before{display: none!important;}
+				}
+			}
+		}
+	}
+}
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+/* BLOG GRID */
+
+/* Archive Grid Styling Styling */
+.blog, .archive, .category, .category-latest-news{
+	.fusion-blog-archive, .fusion-blog-layout-grid-wrapper{.max-width(@max-width: 1380px);
+		.fusion-posts-container{margin: 80px 50px!important;
+			.fusion-post-grid{
+				.fusion-post-wrapper{border: none; .border-radius(@border-radius: 0 0 30px 0);
+					.fusion-flexslider{border-bottom: none!important;
+						.slides{
+							.flex-active-slide{
+								.fusion-image-wrapper{
+									.fusion-rollover{
+										.fusion-rollover-content{
+											.fusion-rollover-title{
+												a{.font-bold(); text-transform: none!important;}
+											}
+										}
+									}
+								}
+							}
+						}
+						
+					}
+					.fusion-post-content-wrapper{
+						.post-content{
+							.entry-title{
+								a{.font-bold();}
+							}
+							.fusion-single-line-meta{.font-bold(); .uppercase(); letter-spacing: 1px; font-size: 10px;}
+							.fusion-content-sep{width: 60px; border-bottom-width: 3px; margin-top: 26px;}
+							.fusion-post-content-container{margin-top: 24px;
+								p{font-size: 16px; line-height: 24px;}
+							}
+						}
+						.fusion-meta-info{padding: 0;
+							.fusion-alignleft{width: 80%;
+								.fusion-read-more{.border(@border: 2px); .border-radius(@border-radius: 20px); padding: 10px 20px; .font-bold(); .uppercase(); font-size: 8px; line-height: 10px; letter-spacing: 1px;
+									&:after{display: none;}
+									&:hover{border-color: @skyblue;}
+								}
+							}
+							.fusion-alignright{width: 20%;}
+						}		
+					}
+				}
+			}
+		}
+	}
+}
+
+/* Fusion Pagination Styling */
+.pagination{float: none; text-align: center; margin: 0 auto 100px!important;
+	.pagination-prev, .pagination-next{.font-bold(); color: @blue;
+		&:before{color: @blue;}
+		&:after{color: @blue;}
+	}
+	.current{.font-bold(); .border-radius(); border-color: @blue; background: @blue; color: @white;}
+	.inactive{.font-bold(); .border-radius(); border-color: @grey1; background: @grey1; color: @blue;
+		&:hover{border-color: @skyblue; background: @skyblue; color: @white;}
+	}
+			
+}
+
+
+
+
+
+
+
+/* ////////////////////////////////////////////////////////////////////////////////////////////// */
+/* MEDIA QUERIES 1024px ///////////////////////////////////////////////////////////////////////// */
+/* ////////////////////////////////////////////////////////////////////////////////////////////// */
+
+
+@media only screen and (max-width: 1024px) {
+	
+	
+	/* GLOBAL STYLES - SINGLE PAGE */
+
+	.post-template-default, .single, .single-post{	
+		#main{
+			
+			/* Left Margins - Paragraphs & Titles */
+			.fusion-title, p{margin-left: 60px!important;}
+			
+			/* Blockquote Styling */
+			blockquote{margin: 39px 0px 42px 0 !important;}
+			
+			/* Gallery Container Styling */
+			.fusion-gallery{margin: 46px 0 46px 50px!important;}
+		
+		}
+	}
+	
+	
+	////////////////////////////////////////////////////////////////////////////////////////////////
+		
+	
+	/* SINGLE PAGE STYLING */
+
+	/* Single Page Styling & Margins */
+	.post-template-default, .single, .single-post{
+		#main{padding: 60px 60px 60px 0!important;
+			#content{width: 70%!important;
+				.fusion-meta-info{margin: 13px 0 -17px 60px!important;}
+			}		
+		}
+	}
+		
+	
+	////////////////////////////////////////////////////////////////////////////////////////////////
+	
+
+	/* BLOG GRID */
+	
+	/* Archive Grid Styling Styling */
+	.blog, .archive, .category, .category-latest-news{
+		.fusion-blog-archive, .fusion-blog-layout-grid-wrapper{.max-width(@max-width: 1380px);
+			.fusion-posts-container{margin: 45px 15px!important;
+				.fusion-post-grid{padding: 15px!important;}
+			}
+		}
+	}
+	
+	/* Fusion Pagination Styling */
+	.pagination{margin-bottom: 60px!important;}
+
+
+}
+
+
+
+
+
+
+
+/* ////////////////////////////////////////////////////////////////////////////////////////////// */
+/* MEDIA QUERIES 800px ////////////////////////////////////////////////////////////////////////// */
+/* ////////////////////////////////////////////////////////////////////////////////////////////// */
+
+
+@media only screen and (max-width: 800px) {
+	
+	
+	/* GLOBAL STYLES - SINGLE PAGE */
+
+	.post-template-default, .single, .single-post{	
+		#main{
+			
+			/* Left Margins - Paragraphs & Titles */
+			.fusion-title, p{margin-left: 0!important;}
+			
+			/* Blockquote Styling */
+			blockquote{margin: 39px 0 42px!important;
+				p{font-size: 22px!important; line-height: 30px!important;}
+			}
+			
+			/* Gallery Container Styling */
+			.fusion-gallery{margin: 46px -10px!important;}
+		
+		}
+	}
+		
+	
+	////////////////////////////////////////////////////////////////////////////////////////////////
+	
+	
+	/* SINGLE PAGE STYLING */
+
+	/* Single Page Styling & Margins */
+	.post-template-default, .single, .single-post{
+		#main{padding: 60px!important;
+			#content{width: 100%!important;
+				.fusion-meta-info{margin: -7px 0 -17px!important;}
+			}		
+		}
+	}
+	
+	/* Widget Styling */
+	#sidebar{
+		.widget{margin-bottom: 40px!important;
+			&:last-of-type{margin-bottom: 0!important;}
+		}
+	}	
+	
+
+	////////////////////////////////////////////////////////////////////////////////////////////////	
+	
+	
+	/* BLOG GRID */
+	
+	/* Archive Grid Styling Styling */
+	.blog, .archive, .category, .category-latest-news{
+		.fusion-blog-archive, .fusion-blog-layout-grid-wrapper{.max-width(@max-width: 1380px);
+			.fusion-posts-container{margin: 15px -15px!important;
+				.fusion-post-grid{padding: 15px!important;}
+			}
+		}
+	}
+	
+	/* Fusion Pagination Styling */
+	.pagination{margin: 45px auto 60px!important;}
+	
+
+}
+
+
+
+
+
+
+
+/* ////////////////////////////////////////////////////////////////////////////////////////////// */
+/* MEDIA QUERIES 500px ////////////////////////////////////////////////////////////////////////// */
+/* ////////////////////////////////////////////////////////////////////////////////////////////// */
+
+
+@media only screen and (max-width: 500px) {
+	
+	
+	/* GLOBAL STYLES - SINGLE PAGE */
+	
+	.post-template-default, .single, .single-post{
+		#main{
+	
+			/* Image Frame Styling */
+			.fusion-imageframe{.border-radius(@border-radius: 0 0 30px 0); margin: 18px -30px 36px!important;}
+			
+			/* Blockquote Styling */
+			blockquote{margin: 25px 0 31px!important;
+				p{font-size: 18px!important; line-height: 26px!important;}
+			}
+			
+			/* Gallery Container Styling */
+			.fusion-gallery{margin: 25px -10px!important;}
+	
+		}
+	}
+
+
+	////////////////////////////////////////////////////////////////////////////////////////////////
+	
+	
+	/* SINGLE PAGE STYLING */
+
+	/* Single Page Styling & Margins */
+	.post-template-default, .single, .single-post{
+		#main{padding: 40px 30px!important;}
+	}
+	
+	/* Widget Styling */
+	#sidebar{
+		.widget{margin-bottom: 30px!important;
+			&:last-of-type{margin-bottom: 0!important;}
+		}
+	}	
+	
+	
+}
