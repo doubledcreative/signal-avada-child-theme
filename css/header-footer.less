@@ -27,14 +27,19 @@ CONTENTS
 /* HEADER */
 
 /* Main Header */
-.fusion-header-wrapper{
+.fusion-header-wrapper{.gradient1(@degree: -90deg, @startColor: rgba(17,36,51,1), @endColor: rgba(0,0,0,0));
 	.fusion-header-v1{
 		.fusion-header{padding:0 20px!important;
 			.fusion-row{
 				.fusion-main-menu{margin-top:45px;
 					.fusion-menu, .fusion-mobile-menu{
 						.menu-item{margin:0 1px;
-							a{.font-bold(); -webkit-font-smoothing: antialiased!important; .letter-spacing();.border-radius();}	
+							a{.font-bold(); -webkit-font-smoothing: antialiased!important; .letter-spacing();.border-radius();color:@white;
+								&:hover{color:@blue!important;}
+							}	
+						}
+						.current-menu-item{
+							a{color:@blue!important;}
 						}
 					}
 				}
@@ -53,7 +58,7 @@ CONTENTS
 				.fusion-main-menu{margin-top:12.5px;
 					.fusion-menu, .fusion-mobile-menu{
 						.menu-item{
-							a{.font-bold(); -webkit-font-smoothing: antialiased!important; .letter-spacing();.border-radius();line-height:55px!important;height:55px!important;padding:0 20px!important;}	
+							a{.font-bold(); -webkit-font-smoothing: antialiased!important; .letter-spacing();.border-radius();line-height:55px!important;height:55px!important;padding:0 20px!important;color:@blue;}	
 						}
 					}
 				}
@@ -62,7 +67,7 @@ CONTENTS
 	}
 }
 
-.fusion-is-sticky .fusion-main-menu > ul > li.current-menu-ancestor > a, .fusion-is-sticky .fusion-main-menu > ul > li.current-menu-item > a, .fusion-is-sticky .fusion-main-menu > ul > li.current-menu-parent > a, .fusion-is-sticky .fusion-main-menu > ul > li.current_page_item > a, .fusion-is-sticky .fusion-main-menu > ul > li:not(.fusion-middle-logo-menu-logo) > a:hover, .fusion-main-menu > ul > li.current-menu-ancestor > a, .fusion-main-menu > ul > li.current-menu-item > a, .fusion-main-menu > ul > li.current-menu-parent > a, .fusion-main-menu > ul > li.current_page_item > a, .fusion-main-menu > ul > li:not(.fusion-middle-logo-menu-logo) > a:hover, .fusion-main-menu > ul > li:not(.fusion-middle-logo-menu-logo):hover > a{}
+.fusion-body .fusion-main-menu .current-menu-ancestor > a, .fusion-body .fusion-main-menu .current-menu-item > a, .fusion-body .fusion-main-menu .current-menu-item:not(.fusion-main-menu-cart) > a:before, .fusion-body .fusion-main-menu .current-menu-parent > a, .fusion-body .fusion-main-menu .current_page_item > a{color:@blue!important;}
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
